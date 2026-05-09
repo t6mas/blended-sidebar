@@ -1,7 +1,7 @@
 {
   "id": "blended-sidebar",
   "name": "Blended Sidebar",
-  "description": "A page-aware sidebar that adapts its color to match the active website.",
+  "description": "A sidebar that adapts to the page and combines the Zen Chrome aesthetic with the active website.",
   "author": "based on blended-addressbar by kkugot",
   "version": "1.0.0",
   "updatedAt": "2026-05-09",
