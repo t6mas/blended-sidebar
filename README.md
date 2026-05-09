@@ -2,8 +2,7 @@
 
 Applies the same page-aware adaptive color that **Blended Addressbar** uses on the URL bar to the left sidebar icon strip.
 <p align="center">
-  <img src="https://i.postimg.cc/vQCvHKPh/386shots-so.png" width="45%" />
-  <img src="https://i.postimg.cc/ZnwdS0RC/668shots-so.png" width="45%" />
+  <img src="https://i.postimg.cc/38nJFsPN/204shots-so.png" alt="Blended Sidebar Preview" width="100%">
 </p>
 
 ## Requirement
