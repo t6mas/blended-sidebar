@@ -1,0 +1,133 @@
+/*
+ * Blended Sidebar - PULIDO FINAL V3 (Fibrón Inteligente solo en Modo Normal)
+ */
+
+:root {
+  --zen-native-inner-radius: 0px !important;
+  --zen-native-border-radius: 0px !important;
+  --zen-border-radius: 0px !important;
+  --zen-main-app-border-radius: 0px !important;
+  
+  --blended-sync-speed: 100ms; 
+  --blended-sync-curve: linear;
+}
+
+@layer blended-sidebar {
+
+  /* 1. EL FONDO BASE DE LA VENTANA (No lleva sombra para no glitchear la web) */
+  #main-window,
+  #browser,
+  #appcontent {
+    background-image: none !important;
+    background-color: var(--zen-tab-header-background, var(--zen-main-browser-background)) !important;
+    transition-property: background-color !important;
+    transition-duration: var(--blended-sync-speed) !important;
+    transition-timing-function: var(--blended-sync-curve) !important;
+  }
+
+  /* 2. TODAS LAS CAJAS INTERNAS Y EXTERNAS (Llevan color sincronizado pero SIN SOMBRA por defecto) */
+  #navigator-toolbox,
+  .browserSidebarContainer,
+  #zen-sidebar-top-buttons,
+  #zen-sidebar-foot-buttons,
+  #sidebar-box,
+  #sidebar-main,
+  #titlebar,
+  #notifications-toolbar,
+  #zen-media-controls-toolbar,
+  .zen-workspace-tabs-section {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: none !important; 
+    background-color: var(--zen-tab-header-background, var(--zen-main-browser-background)) !important;
+    color: var(--zen-tab-header-foreground, inherit) !important;
+    border-radius: 0 !important; 
+    border: none !important;
+    clip-path: none !important;
+    
+    /* Apagamos cualquier sombra por defecto para evitar la línea gruesa en modo compacto */
+    box-shadow: none !important; 
+    
+    transition-property: background-color, color, fill, box-shadow !important;
+    transition-duration: var(--blended-sync-speed) !important;
+    transition-timing-function: var(--blended-sync-curve) !important;
+  }
+
+  /* 3. EL FIBRÓN ANTI-PUNTITOS (SOLO EN MODO NORMAL) */
+  /* El :not() hace que la sombra de 6px desaparezca mágicamente al pasar a modo compacto */
+  :root:not([zen-compact-mode="true"]) #navigator-toolbox,
+  :root:not([zen-compact-mode="true"]) .browserSidebarContainer {
+    overflow: visible !important; 
+    box-shadow: 0 0 0 6px var(--zen-tab-header-background, var(--zen-main-browser-background)) !important; 
+  }
+
+  /* 4. ASEGURAR LA LÍNEA DE ESTIRAR (Splitter) */
+  #zen-sidebar-splitter,
+  #sidebar-splitter {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    background-color: var(--zen-tab-header-background, var(--zen-main-browser-background)) !important;
+    background-image: none !important;
+    border: none !important;
+    min-width: 5px !important;
+    width: 5px !important;
+    opacity: 1 !important;
+    
+    transition-property: background-color !important;
+    transition-duration: var(--blended-sync-speed) !important;
+    transition-timing-function: var(--blended-sync-curve) !important;
+  }
+
+  #zen-sidebar-splitter:hover,
+  #sidebar-splitter:hover,
+  #zen-sidebar-splitter:active,
+  #sidebar-splitter:active {
+    background-color: color-mix(in srgb, var(--zen-tab-header-foreground, currentColor) 20%, transparent) !important;
+  }
+
+  /* 5. ESTÉTICA DE BOTONES E ICONOS */
+  .zen-workspace-empty-space { border: none !important; outline: none !important; }
+  .zen-current-workspace-indicator-name { color: var(--zen-tab-header-foreground, inherit) !important; }
+  
+  #zen-sidebar-top-buttons toolbarbutton, 
+  #zen-sidebar-foot-buttons toolbarbutton, 
+  #zen-sidebar-top-buttons .toolbarbutton-icon, 
+  #zen-sidebar-foot-buttons .toolbarbutton-icon, 
+  #zen-sidebar-top-buttons image, 
+  #zen-sidebar-foot-buttons image { 
+    color: var(--zen-tab-header-foreground, inherit) !important; 
+    fill: var(--zen-tab-header-foreground, currentColor) !important; 
+    --toolbarbutton-icon-fill: var(--zen-tab-header-foreground, currentColor) !important; 
+    opacity: 1 !important; 
+    
+    transition-property: color, fill, background-color !important;
+    transition-duration: var(--blended-sync-speed) !important;
+    transition-timing-function: var(--blended-sync-curve) !important;
+  }
+  
+  .tabbrowser-tab, 
+  .tabbrowser-tab .tab-content, 
+  .tabbrowser-tab .tab-label, 
+  .tabbrowser-tab .tab-icon-image { 
+    color: var(--zen-tab-header-foreground, inherit) !important; 
+    transition: color var(--blended-sync-speed) var(--blended-sync-curve) !important;
+  }
+  
+  #zen-sidebar-top-buttons toolbarbutton:hover, 
+  #zen-sidebar-foot-buttons toolbarbutton:hover { 
+    background-color: color-mix(in srgb, var(--zen-tab-header-foreground, currentColor) 12%, transparent) !important; 
+  }
+  
+  #zen-sidebar-top-buttons toolbarbutton[selected="true"], 
+  #zen-sidebar-top-buttons toolbarbutton[open="true"] { 
+    background-color: color-mix(in srgb, var(--zen-tab-header-foreground, currentColor) 18%, transparent) !important; 
+  }
+  
+  #zen-sidebar-top-buttons-separator { 
+    background-color: color-mix(in srgb, var(--zen-tab-header-foreground, currentColor) 20%, transparent) !important; 
+    transition-property: background-color !important;
+    transition-duration: var(--blended-sync-speed) !important;
+    transition-timing-function: var(--blended-sync-curve) !important;
+  }
+
+} /* end @layer blended-sidebar */
