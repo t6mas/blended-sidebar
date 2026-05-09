@@ -1,7 +1,6 @@
 # Blended Sidebar
 
 Applies the same page-aware adaptive color that **Blended Addressbar** uses on the URL bar to the left sidebar icon strip.
-
 <p align="center">
   <img src="Captura.jpg" alt="Tema Azul Oscuro" width="45%" />
   <img src="Captura3.jpg" alt="Tema Verde Adaptado" width="45%" />
