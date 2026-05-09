@@ -22,37 +22,17 @@ There are two ways to install this mod using Sine.
 5. Enable **Blended Sidebar** in the Sine settings and restart Zen Browser.
 
 ### Method 2: Manual Install
+
 If the easy install fails, you can add it manually:
-1. Open your Zen Browser profile folder (e.g., `C:\Users\YourUser\AppData\Roaming\zen\Profiles\[your-profile]\chrome\sine-mods\`).
-2. Copy the `blended-sidebar` folder into the `sine-mods` directory.
-3. Open the `mods.json` file located in the `sine-mods` folder.
-4. Carefully paste the following configuration inside the main object (don't forget to add a comma before it if it's not the first item):
+
+1. Download the zip file from "code"
+2. Open your Zen Browser profile folder (e.g., `C:\Users\YourUser\AppData\Roaming\zen\Profiles\[your-profile]\chrome\sine-mods\`).
+3. Copy the `blended-sidebar` folder into the `sine-mods` directory.
+4. Open the `mods.json` file located in the `sine-mods` folder.
+5. Carefully paste the following configuration inside the main object (don't forget to add a comma before it if it's not the first item):
 
 ```json
-"blended-sidebar": {
-  "id": "blended-sidebar",
-  "name": "Blended Sidebar",
-  "description": "A page-aware sidebar that adapts its color to match the active website.",
-  "author": "based on blended-addressbar by kkugot",
-  "version": "1.0.0",
-  "updatedAt": "2026-05-09",
-  "tags": ["sidebar", "adaptive", "theming", "zen browser"],
-  "fork": ["zen"],
-  "scripts": {
-    "blended-sidebar.uc.js": {
-      "include": ["chrome://browser/content/browser.xhtml"]
-    }
-  },
-  "style": {
-    "chrome": "style.css",
-    "content": ""
-  },
-  "readme": "README.md",
-  "js": true,
-  "createdAt": "2026-05-09",
-  "no-updates": true,
-  "enabled": true
-}
+,"blended-sidebar":{"id":"blended-sidebar","name":"Blended Sidebar","description":"A sidebar that adapts to the page and combines the Zen Chrome aesthetic with the active website.","author":"based on blended-addressbar by kkugot","version":"1.0.0","updatedAt":"2026-05-09","tags":["sidebar","adaptive","theming","zen browser"],"fork":["zen"],"scripts":{"blended-sidebar.uc.js":{"include":["chrome://browser/content/browser.xhtml"]}},"style":{"chrome":"style.css","content":""},"readme":"README.md","js":true,"createdAt":"2026-05-09","no-updates":true,"enabled":true}
 ```
 
 5. Reload Sine or restart Zen Browser.
