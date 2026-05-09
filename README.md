@@ -7,7 +7,7 @@ Applies the same page-aware adaptive color that **Blended Addressbar** uses on t
 
 ## Requirement
 
-**Blended Addressbar must be installed and enabled.** This mod only adds CSS — it reuses the `--zen-tab-header-background` and `--zen-tab-header-foreground` variables that blended-addressbar's script writes on every tab change.
+**[Blended Addressbar ](https://github.com/kkugot/blended-addressbar)must be installed and enabled.** This mod only adds CSS — it reuses the `--zen-tab-header-background` and `--zen-tab-header-foreground` variables that blended-addressbar's script writes on every tab change.
 
 ## Installation
 
