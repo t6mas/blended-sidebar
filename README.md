@@ -45,6 +45,8 @@ Please note that this mod has undergone limited testing and might contain bugs. 
 
 ## My Blended Addressbar Fixes
 
+Some fixes for the original "Blended Address Bar" mod, fixing things that moved out of place and also removing the rounded corners.
+
 <details>
 <summary><b>Click here to view my fixed files for Blended Addressbar</b></summary>
 
