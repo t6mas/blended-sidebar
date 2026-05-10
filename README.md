@@ -43,9 +43,7 @@ Please note that this mod has undergone limited testing and might contain bugs. 
 
 ---
 
-## 🛠️ Bonus: My Blended Addressbar Fixes (Compact Mode)
-
-If you are using the original Blended Addressbar mod and experiencing squished icons pushed to the left, or a "floating" loading line when using **Compact Mode**, I have tweaked some of the original CSS to fix these layout issues.
+## My Blended Addressbar Fixes
 
 <details>
 <summary><b>Click here to view my fixed files for Blended Addressbar</b></summary>
