@@ -1,6 +1,6 @@
 # Blended Sidebar
 
-Applies the same page-aware adaptive color that **[Blended Addressbar](https://github.com/kkugot/blended-addressbar)** uses on the URL bar to the left sidebar icon strip.
+Applies the same page-aware adaptive color that **[Blended Addressbar](https://github.com/kkugot/blended-addressbar)** uses on the URL bar to the left sidebar icon strip. 
 
 <p align="center">
   <img src="https://i.postimg.cc/38nJFsPN/204shots-so.png" alt="Blended Sidebar Preview" width="100%">
@@ -16,7 +16,7 @@ There are two ways to install this mod using Sine.
 
 ### Method 1: Easy Install (Recommended)
 1. Open Zen Browser **Settings**.
-2. Go to the **Sine mods** section.
+2. Go to the **[Sine](https://github.com/CosmoCreeper/Sine) mods** section.
 3. Scroll down to the input box under *"or, add your own locally from a GitHub repo."*
 4. Paste the URL of this repository and click **Add**.
 5. Enable **Blended Sidebar** in the Sine settings and restart Zen Browser.
